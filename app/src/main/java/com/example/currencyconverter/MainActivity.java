@@ -86,7 +86,13 @@ public class MainActivity extends AppCompatActivity {
             mainViewModel.getValue(currencyTo, currencyRes).observe(this,
                     conversionRate -> {
                         double result;
-                        result = Double.parseDouble(binding.EtConvertTo.getText().toString())
+                        String s;
+                        if (binding.EtConvertTo.getText().toString().length() != 0){
+                             s = binding.EtConvertTo.getText().toString();
+                        }else{
+                            s = "0";
+                        }
+                        result = Double.parseDouble(s)
                                 * conversionRate;
                         binding.EtConvertRes.setText(Double.toString(result));
                     });
@@ -96,7 +102,13 @@ public class MainActivity extends AppCompatActivity {
             mainViewModel.getValueFromDb(currencyTo, currencyRes).observe(this,
                     conversionRate -> {
                         double result;
-                        result = Double.parseDouble(binding.EtConvertTo.getText().toString())
+                        String s;
+                        if (binding.EtConvertTo.getText().toString().length() != 0){
+                            s = binding.EtConvertTo.getText().toString();
+                        }else{
+                            s = "0";
+                        }
+                        result = Double.parseDouble(s)
                                 * conversionRate;
                         binding.EtConvertRes.setText(Double.toString(result));
                     });
