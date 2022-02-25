@@ -74,18 +74,7 @@
         app:layout_constraintBottom_toTopOf="@+id/EtConvertRes"
         app:layout_constraintStart_toStartOf="@+id/EtConvertRes" />
 
-    <ImageButton
-        android:id="@+id/BtnUpdate"
-        android:layout_width="74dp"
-        android:layout_height="57dp"
-        android:onClick="onClickUpdate"
-        app:layout_constraintBottom_toTopOf="@+id/SpinnerConvertRes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
-        app:layout_constraintStart_toEndOf="@+id/BtnSave"
-        app:layout_constraintTop_toBottomOf="@+id/SpinnerConvertTo"
-        app:layout_constraintVertical_bias="0.34"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
+
 
     <Spinner
         android:id="@+id/SpinnerConvertTo"

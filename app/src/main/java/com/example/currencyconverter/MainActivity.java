@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             setContentView(view);
         } else {
             binding.BtnSave.setVisibility(View.GONE);
-            binding.BtnUpdate.setVisibility(View.GONE);
             binding.SpinnerConvertTo.setAdapter(null);
             binding.SpinnerConvertRes.setAdapter(null);
             mainViewModel.getConvertingCurrenciesFromDb().observe(this, v -> {
