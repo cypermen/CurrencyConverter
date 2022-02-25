@@ -15,6 +15,7 @@ import com.example.converter.databinding.ActivityMainBinding;
 import com.example.currencyconverter.domain.model.CurrencyDTO;
 import com.example.currencyconverter.domain.viewmodel.MainViewModel;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,7 +95,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                         result = Double.parseDouble(s)
                                 * conversionRate;
-                        binding.EtConvertRes.setText(Double.toString(result));
+                        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+                        binding.EtConvertRes.setText(decimalFormat.format(result));
                     });
         } else {
             currencyTo = binding.SpinnerConvertTo.getSelectedItem().toString();
@@ -110,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         result = Double.parseDouble(s)
                                 * conversionRate;
-                        binding.EtConvertRes.setText(Double.toString(result));
+                        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                        binding.EtConvertRes.setText(decimalFormat.format(result));
                     });
         }
     }
